@@ -1,10 +1,10 @@
 document.getElementById('generateBtn').addEventListener('click', function() {
-    const title = document.getElementById('title').value;
-    const length = document.getElementById('length').value;
+    const title = document.getElementById('title').value.trim();
+    const length = parseInt(document.getElementById('length').value, 10);
     const resultDiv = document.getElementById('result');
 
-    if (!title || !length) {
-        resultDiv.innerHTML = "请填写所有字段！";
+    if (!title || isNaN(length) || length < 10 || length > 10000) {
+        resultDiv.innerHTML = "请填写有效的主题和长度！";
         return;
     }
 

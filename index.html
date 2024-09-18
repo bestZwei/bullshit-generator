@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>狗屁不通文章生成器</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <h1>狗屁不通文章生成器</h1>
-        <input type="text" id="title" placeholder="输入主题">
-        <input type="number" id="length" placeholder="输入长度 (10-10000)">
-        <button id="generateBtn">生成文章</button>
+        <div class="input-group">
+            <input type="text" id="title" placeholder="输入主题">
+            <input type="number" id="length" placeholder="输入长度 (10-10000)">
+            <button id="generateBtn">生成文章</button>
+        </div>
         <div id="result"></div>
     </div>
     <script src="script.js"></script>
