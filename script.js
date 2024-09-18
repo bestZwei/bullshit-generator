@@ -8,6 +8,8 @@ document.getElementById('generateBtn').addEventListener('click', function() {
         return;
     }
 
+    resultDiv.innerHTML = "正在生成，请稍候...";
+
     fetch(`https://oiapi.net/API/Bullshit/?title=${encodeURIComponent(title)}&length=${length}`)
         .then(response => response.json())
         .then(data => {
